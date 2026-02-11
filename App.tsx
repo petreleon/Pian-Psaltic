@@ -3,10 +3,11 @@ import { ControlPanel } from './components/ControlPanel';
 import { PianoBoard } from './components/PianoBoard';
 import { BookOpen } from 'lucide-react';
 import { audioEngine } from './services/audioEngine';
+import { GLASURI, BASE_NOTE_FREQUENCIES } from './constants'; // Import constants
 
 const App: React.FC = () => {
   const [currentGlas, setCurrentGlas] = useState<number>(1);
-  const [baseFreq, setBaseFreq] = useState<number>(261.63); // Default Ni = Do (C4)
+  const [baseFreq, setBaseFreq] = useState<number>(293.66); // Default Pa (Glas 1 Start)
   const [octave, setOctave] = useState<number>(0); // -1 (Low), 0 (Mid), 1 (High)
   const [volume, setVolume] = useState<number>(0.5);
 
@@ -15,12 +16,20 @@ const App: React.FC = () => {
     audioEngine.setVolume(volume);
   }, [volume]);
 
+  // Update Base Frequency when Glas changes
+  useEffect(() => {
+    const selectedGlas = GLASURI.find(g => g.id === currentGlas);
+    if (selectedGlas && BASE_NOTE_FREQUENCIES[selectedGlas.baseNote]) {
+      setBaseFreq(BASE_NOTE_FREQUENCIES[selectedGlas.baseNote]);
+    }
+  }, [currentGlas]);
+
   // Calculate the actual frequency sent to the board based on the octave shift
   const effectiveFreq = baseFreq * Math.pow(2, octave);
 
   return (
     <div className="min-h-screen bg-[#121212] flex flex-col items-center bg-[url('https://www.transparenttextures.com/patterns/dark-leather.png')]">
-      
+
       {/* Header */}
       <header className="w-full bg-gradient-to-b from-stone-900 to-[#1a1a1a] border-b border-stone-800 shadow-lg py-8 px-4 mb-8">
         <div className="max-w-5xl mx-auto flex flex-col items-center text-center">
@@ -36,9 +45,9 @@ const App: React.FC = () => {
 
       {/* Main Content */}
       <main className="w-full px-4 flex flex-col items-center flex-1">
-        
-        <ControlPanel 
-          currentGlasId={currentGlas} 
+
+        <ControlPanel
+          currentGlasId={currentGlas}
           setGlasId={setCurrentGlas}
           baseFreq={baseFreq}
           setBaseFreq={setBaseFreq}
@@ -48,7 +57,7 @@ const App: React.FC = () => {
           setVolume={setVolume}
         />
 
-        <PianoBoard 
+        <PianoBoard
           glasId={currentGlas}
           baseFreq={effectiveFreq}
         />

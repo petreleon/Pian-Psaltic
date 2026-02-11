@@ -9,6 +9,16 @@ import { GlasDefinition, NoteName, NoteDefinition } from './types';
 // 1 Moria = 1200 / 72 = 16.666... Cents.
 const CENTS_PER_MORIA = 1200 / 72;
 
+export const BASE_NOTE_FREQUENCIES: Record<string, number> = {
+  'Ni': 261.63, // C4
+  'Pa': 293.66, // D4
+  'Vu': 329.63, // E4 (approx)
+  'Ga': 349.23, // F4
+  'Di': 392.00, // G4
+  'Ke': 440.00, // A4
+  'Zo': 493.88  // B4
+};
+
 // --- INTERVAL DEFINITIONS (IN MORIA) ---
 
 // 1. DIATONIC (Scara Diatonica)
@@ -48,7 +58,7 @@ export const GLASURI: GlasDefinition[] = [
     id: 1,
     name: "Glasul 1",
     baseNote: 'Pa',
-    description: "Diatonic (Baza: Pa)",
+    description: "Diatonic (Baza: Pa) [Gr: Echos Protos]",
     intervals: [10, 8, 12, 12, 10, 8, 12] // Starts from Pa (Re). Intervals follow Diatonic cycle from Pa.
     // Diatonic Cycle: Ni(12)Pa(10)Vu(8)Ga(12)Di(12)Ke(10)Zo(8)Ni
     // From Pa: Pa->Vu(10), Vu->Ga(8), Ga->Di(12), Di->Ke(12), Ke->Zo(10), Zo->Ni(8), Ni->Pa(12)
@@ -57,21 +67,21 @@ export const GLASURI: GlasDefinition[] = [
     id: 2,
     name: "Glasul 2",
     baseNote: 'Di',
-    description: "Chromatic Moale (Baza: Di)",
+    description: "Chromatic Moale (Baza: Di) [Gr: Echos Deuterus]",
     intervals: CHROMATIC_SOFT_MORIA // 8, 14, 8...
   },
   {
     id: 3,
     name: "Glasul 3",
     baseNote: 'Ga',
-    description: "Enharmonic (Baza: Ga)",
+    description: "Enharmonic (Baza: Ga) [Gr: Echos Tritos]",
     intervals: ENHARMONIC_MORIA // 12, 12, 6... (Major scale approx)
   },
   {
     id: 4,
     name: "Glasul 4 (Legetos)",
     baseNote: 'Vu',
-    description: "Diatonic Legetos (Baza: Vu)",
+    description: "Diatonic Legetos (Baza: Vu) [Gr: Echos Tetartos]",
     // Legetos often slightly raises Vu or modifies the scale.
     // Standard Diatonic from Vu:  Vu->Ga(8), Ga->Di(12), Di->Ke(12), Ke->Zo(10), Zo->Ni(8), Ni->Pa(12), Pa->Vu(10)
     intervals: [8, 12, 12, 10, 8, 12, 10]
@@ -80,7 +90,7 @@ export const GLASURI: GlasDefinition[] = [
     id: 5,
     name: "Glasul 5",
     baseNote: 'Pa',
-    description: "Diatonic (Baza: Pa - similar Glas 1)",
+    description: "Diatonic (Baza: Pa - similar Glas 1) [Gr: Echos Plagios Protos]",
     // Same as Glas 1 essentially
     intervals: [10, 8, 12, 12, 10, 8, 12]
   },
@@ -88,21 +98,21 @@ export const GLASURI: GlasDefinition[] = [
     id: 6,
     name: "Glasul 6",
     baseNote: 'Pa',
-    description: "Chromatic Tare (Baza: Pa)",
+    description: "Chromatic Tare (Baza: Pa) [Gr: Echos Plagios Deuterus]",
     intervals: CHROMATIC_HARD_MORIA // 6, 20, 4...
   },
   {
     id: 7,
     name: "Glasul 7 (Varys)",
     baseNote: 'Zo',
-    description: "Enharmonic/Diatonic (Baza: Zo)",
+    description: "Enharmonic/Diatonic (Baza: Zo) [Gr: Echos Varys]",
     intervals: VARYS_MORIA // 8, 12, 10...
   },
   {
     id: 8,
     name: "Glasul 8",
     baseNote: 'Ni',
-    description: "Diatonic (Baza: Ni)",
+    description: "Diatonic (Baza: Ni) [Gr: Echos Plagios Tetartos]",
     intervals: DIATONIC_MORIA // 12, 10, 8...
   }
 ];
