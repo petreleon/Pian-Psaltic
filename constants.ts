@@ -35,8 +35,8 @@ const ENHARMONIC_MORIA = [12, 12, 6, 12, 12, 12, 6];
 // 5. ENHARMONIC VARYS (Glas 7)
 // Often treated as Diatonic originating from Zo (B) or Fa (F).
 // Using the "Diatonic from Zo" definition (Mixolydian-ish).
-// Intervals from Zo: 8, 12, 10, 12, 8, 12, 10 (Derived from Diatonic cycle)
-const VARYS_MORIA = [8, 12, 10, 12, 8, 12, 10];
+// Intervals from Zo: 8, 12, 10, 8, 12, 12, 10 (Matches Standard Diatonic Cycle: Zo->Ni(8)->Pa(12)->Vu(10)->Ga(8)->Di(12)...)
+const VARYS_MORIA = [8, 12, 10, 8, 12, 12, 10];
 
 
 export const NOTE_NAMES: NoteName[] = ['Ni', 'Pa', 'Vu', 'Ga', 'Di', 'Ke', 'Zo'];
