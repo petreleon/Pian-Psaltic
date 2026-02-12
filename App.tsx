@@ -4,6 +4,7 @@ import { PianoBoard } from './components/PianoBoard';
 import { BookOpen } from 'lucide-react';
 import { audioEngine } from './services/audioEngine';
 import { GLASURI, BASE_NOTE_FREQUENCIES } from './constants'; // Import constants
+import { TermsModal } from './components/TermsModal';
 
 const App: React.FC = () => {
   const [currentGlas, setCurrentGlas] = useState<number>(1);
@@ -61,6 +62,8 @@ const App: React.FC = () => {
           glasId={currentGlas}
           baseFreq={effectiveFreq}
         />
+
+        <TermsModal />
 
       </main>
 
