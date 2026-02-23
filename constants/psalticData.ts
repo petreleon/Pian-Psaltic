@@ -153,15 +153,6 @@ export const PSALTIC_SIGNS: PsalticSign[] = [
         valoare: 7
     },
     {
-        id: 'kentima',
-        nume: 'Kentima',
-        caracter: '𝁏',
-        descriere: 'Urcă 2 trepte (prin salt).',
-        detalii: 'Stă mereu la dreapta sau sub un semn mut.',
-        tip: 'urcare',
-        valoare: 2
-    },
-    {
         id: 'apostrof',
         nume: 'Apostrof (Epistrof)',
         caracter: '𝁑',
