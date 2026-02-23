@@ -2,24 +2,21 @@ import React, { useState, useEffect } from 'react';
 import { ShieldCheck, Lock, ExternalLink } from 'lucide-react';
 
 export const TermsModal: React.FC = () => {
-    const [isOpen, setIsOpen] = useState(false);
-
-    useEffect(() => {
-        const accepted = localStorage.getItem('pian_psaltic_terms_accepted');
-        if (!accepted) {
-            setIsOpen(true);
-        }
-    }, []);
+    // Initialize directly from localStorage to avoid flash of content or effect timing issues
+    const [isOpen, setIsOpen] = useState(() => {
+        const accepted = localStorage.getItem('pian_psaltic_terms_accepted_v2');
+        return !accepted;
+    });
 
     const handleAccept = () => {
-        localStorage.setItem('pian_psaltic_terms_accepted', 'true');
+        localStorage.setItem('pian_psaltic_terms_accepted_v2', 'true');
         setIsOpen(false);
     };
 
     if (!isOpen) return null;
 
     return (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4">
+        <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-sm p-4">
             <div className="bg-stone-900 border border-stone-700 rounded-lg max-w-2xl w-full max-h-[90vh] flex flex-col shadow-2xl">
 
                 {/* Header */}

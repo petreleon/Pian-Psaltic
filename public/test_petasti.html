@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Test Petasti Render</title>
+    <style>
+        @font-face {
+            font-family: 'Neanes';
+            src: url('./fonts/Neanes.otf') format('opentype');
+        }
+
+        body {
+            font-family: 'Neanes', sans-serif;
+            font-size: 60px;
+            background: #222;
+            color: #ffa000;
+            padding: 50px;
+        }
+
+        .row {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 20px;
+            align-items: center;
+        }
+
+        .label {
+            font-family: sans-serif;
+            font-size: 14px;
+            color: white;
+            width: 250px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="row">
+        <div class="label">Petasti + Kentimata (1D049 1D04A)</div>
+        <div>&#x1D049;&#x1D04A;</div>
+    </div>
+    <div class="row">
+        <div class="label">+3 Petasti + Kentima (E043)</div>
+        <div>&#xE043;</div>
+    </div>
+    <div class="row">
+        <div class="label">+4 Petasti + Ypsili R (E044)</div>
+        <div>&#xE044;</div>
+    </div>
+    <div class="row">
+        <div class="label">+5 Petasti + Ypsili L (E045)</div>
+        <div>&#xE045;</div>
+    </div>
+    <div class="row">
+        <div class="label">+6 Petasti+Ken+Yps R (E046)</div>
+        <div>&#xE046;</div>
+    </div>
+    <div class="row">
+        <div class="label">+7 Petasti+Ken+Yps Mid (E047)</div>
+        <div>&#xE047;</div>
+    </div>
+</body>
+
+</html>

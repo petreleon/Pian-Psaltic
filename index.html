@@ -1,21 +1,38 @@
 <!DOCTYPE html>
 <html lang="ro">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pian Psaltic</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-      body {
-        font-family: 'Lato', sans-serif;
-        background-color: #1a1a1a;
-        color: #e5e5e5;
-      }
-      .font-byzantine {
-        font-family: 'Cinzel', serif;
-      }
-    </style>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pian Psaltic</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@400;700&display=swap"
+    rel="stylesheet">
+  <style>
+    @font-face {
+      font-family: 'EZ Psaltica';
+      src: url('/fonts/EZ Psaltica.TTF') format('truetype');
+    }
+
+    @font-face {
+      font-family: 'Neanes';
+      src: url('/fonts/Neanes.otf') format('opentype');
+    }
+
+    body {
+      font-family: 'Lato', sans-serif;
+      background-color: #1a1a1a;
+      color: #e5e5e5;
+    }
+
+    .font-byzantine {
+      font-family: 'Cinzel', serif;
+    }
+
+    .font-psaltica {
+      font-family: 'Neanes', 'EZ Psaltica', 'Apple Symbols', 'Segoe UI Symbol', serif;
+    }
+  </style>
   <script type="importmap">
 {
   "imports": {
@@ -27,8 +44,10 @@
 }
 </script>
 </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/index.tsx"></script>
-  </body>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+
 </html>
