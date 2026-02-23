@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { PSALTIC_SIGNS, PsalticSign, PsalticSignTip } from '../constants/psalticData';
 import { CheckCircle2, XCircle, RotateCcw, ArrowRight } from 'lucide-react';
 
@@ -6,6 +6,8 @@ export const QuizSection: React.FC = () => {
     const [currentQuestion, setCurrentQuestion] = useState<PsalticSign | null>(null);
     const [score, setScore] = useState(0);
     const [totalQuestions, setTotalQuestions] = useState(0);
+    const topRef = useRef<HTMLDivElement>(null);
+    const phase2Ref = useRef<HTMLDivElement>(null);
 
     // Phase 1
     const [directionSelected, setDirectionSelected] = useState<PsalticSignTip | null>(null);
@@ -17,11 +19,25 @@ export const QuizSection: React.FC = () => {
         setCurrentQuestion(PSALTIC_SIGNS[randomIndex]);
         setDirectionSelected(null);
         setStepsSelected(null);
+
+        setTimeout(() => {
+            if (topRef.current) {
+                topRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }, 50);
     };
 
     useEffect(() => {
         generateNewQuestion();
     }, []);
+
+    useEffect(() => {
+        if (directionSelected !== null && phase2Ref.current) {
+            setTimeout(() => {
+                phase2Ref.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }, 100);
+        }
+    }, [directionSelected]);
 
     const handleDirection = (tip: PsalticSignTip) => {
         if (directionSelected) return;
@@ -52,7 +68,7 @@ export const QuizSection: React.FC = () => {
     if (!currentQuestion) return null;
 
     return (
-        <div className="max-w-2xl w-full flex flex-col items-center animate-fade-in">
+        <div ref={topRef} className="max-w-2xl w-full flex flex-col items-center animate-fade-in scroll-mt-24">
             <div className="w-full flex justify-between items-center mb-10 px-6 py-4 bg-black/20 border border-stone-800 rounded-2xl">
                 <div className="flex flex-col">
                     <span className="text-stone-500 text-xs uppercase tracking-widest font-bold">Scor curent</span>
@@ -111,7 +127,7 @@ export const QuizSection: React.FC = () => {
                 </div>
 
                 {directionSelected && (
-                    <div className="mt-8 flex flex-col items-center animate-in slide-in-from-top-4 duration-300 w-full relative z-10">
+                    <div ref={phase2Ref} className="mt-8 flex flex-col items-center animate-in slide-in-from-top-4 duration-300 w-full relative z-10 scroll-mt-32">
                         <div className={`flex items-center gap-3 mb-8 ${currentQuestion.tip === directionSelected ? 'text-emerald-400' : 'text-rose-400'}`}>
                             {currentQuestion.tip === directionSelected ? (
                                 <>
