@@ -104,15 +104,20 @@ const App: React.FC = () => {
       <footer className="w-full py-6 text-center text-stone-600 text-xs mt-12 flex flex-col items-center gap-2">
         <p>© 2024 Unealtă Psaltică Digitală.</p>
         <p>Intervalele sunt aproximate pentru redare web (72 morii / scară).</p>
-        <button
-          onClick={() => {
-            localStorage.removeItem('pian_psaltic_terms_accepted_v2');
-            window.location.reload();
-          }}
-          className="text-stone-700 hover:text-stone-500 underline mt-2"
-        >
-          Resetare Termeni (Debug)
-        </button>
+        <div className="flex items-center gap-4 mt-2">
+          <a href="/privacy.html" className="text-stone-700 hover:text-stone-500 underline">
+            Politica de Confidențialitate
+          </a>
+          <button
+            onClick={() => {
+              localStorage.removeItem('pian_psaltic_terms_accepted_v2');
+              window.location.reload();
+            }}
+            className="text-stone-700 hover:text-stone-500 underline"
+          >
+            Resetare Termeni (Debug)
+          </button>
+        </div>
       </footer>
 
       <TermsModal />
