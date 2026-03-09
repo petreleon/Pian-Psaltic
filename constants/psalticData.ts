@@ -153,8 +153,8 @@ export const PSALTIC_SIGNS: PsalticSign[] = [
         valoare: 7
     },
     {
-        id: 'apostrof',
-        nume: 'Apostrof (Epistrof)',
+        id: 'epistrof',
+        nume: 'Epistrof',
         caracter: '𝁑',
         descriere: 'Coboară o treaptă.',
         tip: 'coborare',
@@ -169,8 +169,8 @@ export const PSALTIC_SIGNS: PsalticSign[] = [
         valoare: -2
     },
     {
-        id: 'elafron_apostrof',
-        nume: 'Elafron cu Apostrof',
+        id: 'elafron_epistrof',
+        nume: 'Elafron cu Epistrof',
         caracter: '\uE026',
         descriere: 'Coboară 3 trepte.',
         tip: 'coborare',
@@ -185,8 +185,8 @@ export const PSALTIC_SIGNS: PsalticSign[] = [
         valoare: -2
     },
     {
-        id: 'hamili_apostrof',
-        nume: 'Hamili cu Apostrof',
+        id: 'hamili_epistrof',
+        nume: 'Hamili cu Epistrof',
         caracter: '\uE028',
         descriere: 'Coboară 5 trepte.',
         tip: 'coborare',
@@ -201,8 +201,8 @@ export const PSALTIC_SIGNS: PsalticSign[] = [
         valoare: -6
     },
     {
-        id: 'hamili_elafron_apostrof',
-        nume: 'Hamili, Elafron și Apostrof',
+        id: 'hamili_elafron_epistrof',
+        nume: 'Hamili, Elafron și Epistrof',
         caracter: '\uE02A',
         descriere: 'Coboară 7 trepte.',
         tip: 'coborare',

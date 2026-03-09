@@ -48,7 +48,7 @@ export const TheorySection: React.FC = () => {
                             <div className="flex items-center justify-between group">
                                 <span className="text-stone-400 text-sm flex items-center gap-3">
                                     <span className="font-psaltica text-2xl text-yellow-500/80">𝁑</span>
-                                    Apostrof
+                                    Epistrof
                                 </span>
                                 <span className="text-stone-500 text-xs font-medium">- 1 treaptă</span>
                             </div>
