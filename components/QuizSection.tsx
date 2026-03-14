@@ -20,6 +20,8 @@ export const QuizSection: React.FC = () => {
     const [totalQuestions, setTotalQuestions] = useState(0);
     const topRef = useRef<HTMLDivElement>(null);
     const phase2Ref = useRef<HTMLDivElement>(null);
+    const phase3Ref = useRef<HTMLDivElement>(null);
+    const resultRef = useRef<HTMLDivElement>(null);
 
     // Testul de semne (direcție + trepte + notă)
     const [directionSelected, setDirectionSelected] = useState<PsalticSignTip | null>(null);
@@ -103,6 +105,22 @@ export const QuizSection: React.FC = () => {
             }, 100);
         }
     }, [directionSelected]);
+
+    useEffect(() => {
+        if (stepsSelected !== null && phase3Ref.current) {
+            setTimeout(() => {
+                phase3Ref.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }, 100);
+        }
+    }, [stepsSelected]);
+
+    useEffect(() => {
+        if ((nextNoteSelected !== null || noteQuizSelected !== null) && resultRef.current) {
+            setTimeout(() => {
+                resultRef.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }, 100);
+        }
+    }, [nextNoteSelected, noteQuizSelected]);
 
     const handleDirection = (tip: PsalticSignTip) => {
         if (directionSelected) return;
@@ -304,7 +322,7 @@ export const QuizSection: React.FC = () => {
                                             </div>
 
                                             {/* Faza 3: Ce notă urmează? */}
-                                            <div className="w-full flex flex-col items-center border-t border-stone-800/50 pt-8 mt-4">
+                                            <div ref={phase3Ref} className="w-full flex flex-col items-center border-t border-stone-800/50 pt-8 mt-4 scroll-mt-32">
                                                 <div className="flex items-center gap-4 mb-6">
                                                     <div className="flex flex-col items-center">
                                                         <span className="text-stone-500 text-[10px] uppercase font-bold mb-1">Pornim de la</span>
@@ -353,7 +371,7 @@ export const QuizSection: React.FC = () => {
                                                 </div>
 
                                                 {nextNoteSelected && (
-                                                    <div className="flex flex-col items-center animate-in slide-in-from-top-4 duration-300 w-full">
+                                                    <div ref={resultRef} className="flex flex-col items-center animate-in slide-in-from-top-4 duration-300 w-full scroll-mt-32">
                                                         <div className={`flex items-center gap-3 mb-6 ${nextNoteSelected === nextNoteCorrect ? 'text-emerald-400' : 'text-rose-400'}`}>
                                                             {nextNoteSelected === nextNoteCorrect ? (
                                                                 <>
@@ -381,7 +399,7 @@ export const QuizSection: React.FC = () => {
                                     )}
                                 </div>
                             ) : (
-                                <div className="w-full flex flex-col items-center border-t border-stone-800/50 pt-8 mt-4">
+                                <div ref={phase3Ref} className="w-full flex flex-col items-center border-t border-stone-800/50 pt-8 mt-4 scroll-mt-32">
                                     <div className="flex items-center gap-4 mb-6">
                                         <div className="flex flex-col items-center">
                                             <span className="text-stone-500 text-[10px] uppercase font-bold mb-1">Pornim de la</span>
@@ -430,7 +448,7 @@ export const QuizSection: React.FC = () => {
                                     </div>
 
                                     {nextNoteSelected && (
-                                        <div className="flex flex-col items-center animate-in slide-in-from-top-4 duration-300 w-full">
+                                        <div ref={resultRef} className="flex flex-col items-center animate-in slide-in-from-top-4 duration-300 w-full scroll-mt-32">
                                             <div className={`flex items-center gap-3 mb-6 ${nextNoteSelected === nextNoteCorrect ? 'text-emerald-400' : 'text-rose-400'}`}>
                                                 {nextNoteSelected === nextNoteCorrect ? (
                                                     <>

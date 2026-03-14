@@ -17,13 +17,13 @@ export interface NoteDefinition {
 }
 
 export const NOTE_DEFINITIONS: NoteDefinition[] = [
-    { nume: 'Ni', caracter: 'Νη' },
-    { nume: 'Pa', caracter: 'Πα' },
-    { nume: 'Vu', caracter: 'Βου' },
-    { nume: 'Ga', caracter: 'Γα' },
-    { nume: 'Di', caracter: 'Δι' },
-    { nume: 'Ke', caracter: 'Κε' },
-    { nume: 'Zo', caracter: 'Ζω' },
+    { nume: 'Ni', caracter: '\uE2E0' },
+    { nume: 'Pa', caracter: '\uE2E1' },
+    { nume: 'Vu', caracter: '\uE2E2' },
+    { nume: 'Ga', caracter: '\uE2E3' },
+    { nume: 'Di', caracter: '\uE2E4' },
+    { nume: 'Ke', caracter: '\uE2E5' },
+    { nume: 'Zo', caracter: '\uE2E6' },
 ];
 
 export const PSALTIC_SIGNS: PsalticSign[] = [

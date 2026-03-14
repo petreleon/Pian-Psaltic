@@ -10,11 +10,6 @@
     rel="stylesheet">
   <style>
     @font-face {
-      font-family: 'EZ Psaltica';
-      src: url('/fonts/EZ Psaltica.TTF') format('truetype');
-    }
-
-    @font-face {
       font-family: 'Neanes';
       src: url('/fonts/Neanes.otf') format('opentype');
     }
@@ -30,7 +25,9 @@
     }
 
     .font-psaltica {
-      font-family: 'Neanes', 'EZ Psaltica', 'Apple Symbols', 'Segoe UI Symbol', serif;
+      font-family: 'Neanes', 'Apple Symbols', 'Segoe UI Symbol', serif;
+      font-feature-settings: "liga" 1, "dlig" 1;
+      font-variant-ligatures: common-ligatures discretionary-ligatures;
     }
   </style>
   <script type="importmap">
