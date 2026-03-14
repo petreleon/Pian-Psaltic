@@ -1,4 +1,5 @@
 export type PsalticSignTip = 'urcare' | 'coborare' | 'mentinere';
+export type NoteName = 'Ni' | 'Pa' | 'Vu' | 'Ga' | 'Di' | 'Ke' | 'Zo';
 
 export interface PsalticSign {
     id: string;
@@ -9,6 +10,21 @@ export interface PsalticSign {
     tip: PsalticSignTip;
     valoare: number;
 }
+
+export interface NoteDefinition {
+    nume: NoteName;
+    caracter: string;
+}
+
+export const NOTE_DEFINITIONS: NoteDefinition[] = [
+    { nume: 'Ni', caracter: 'Νη' },
+    { nume: 'Pa', caracter: 'Πα' },
+    { nume: 'Vu', caracter: 'Βου' },
+    { nume: 'Ga', caracter: 'Γα' },
+    { nume: 'Di', caracter: 'Δι' },
+    { nume: 'Ke', caracter: 'Κε' },
+    { nume: 'Zo', caracter: 'Ζω' },
+];
 
 export const PSALTIC_SIGNS: PsalticSign[] = [
     {

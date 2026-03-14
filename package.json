@@ -9,8 +9,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "react": "^19.2.4",
+    "@anthropic-ai/claude-code": "^2.1.75",
     "lucide-react": "^0.563.0",
+    "react": "^19.2.4",
     "react-dom": "^19.2.4"
   },
   "devDependencies": {
