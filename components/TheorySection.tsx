@@ -1,6 +1,6 @@
 import React from 'react';
-import { PSALTIC_SIGNS } from '../constants/psalticData';
-import { ChevronUp, ChevronDown, Minus } from 'lucide-react';
+import { PSALTIC_SIGNS, TEMPORAL_SIGNS, TEMPO_SIGNS } from '../constants/psalticData';
+import { ChevronUp, ChevronDown, Minus, Clock, Zap, Hourglass } from 'lucide-react';
 
 export const TheorySection: React.FC = () => {
     const getTipIcon = (tip: string) => {
@@ -292,6 +292,229 @@ export const TheorySection: React.FC = () => {
                         <span>Isonul (<span className="font-psaltica text-lg">𝁆</span>) este punctul de plecare sau de repaus (ison = egal).</span>
                     </li>
                 </ul>
+            </div>
+
+            {/* TEMPORAL THEORY SECTION */}
+            <div className="mt-16 mb-10 text-center">
+                <h2 className="text-3xl font-byzantine text-yellow-500 mb-4">Timpul în Muzica Bizantină</h2>
+                <p className="text-stone-400 max-w-2xl mx-auto">
+                    Semnele temporale modifică durata neumelor cantabile. 
+                    Spre deosebire de semnele melodice care schimbă înălțimea, acestea controlează ritmul și viteza.
+                </p>
+            </div>
+
+            {/* Gorgon Example - Key Concept */}
+            <div className="mb-12 bg-gradient-to-r from-stone-900/60 to-stone-800/40 border border-yellow-500/20 rounded-2xl p-8 overflow-hidden relative">
+                <div className="absolute top-0 right-0 p-4 opacity-10 pointer-events-none">
+                    <Zap className="text-yellow-500" size={80} />
+                </div>
+                
+                <h3 className="text-xl font-byzantine text-center text-yellow-500/90 mb-6">
+                    Cum funcționează Gorgonul
+                </h3>
+                
+                <div className="flex flex-col items-center gap-6">
+                    {/* Before Gorgon */}
+                    <div className="flex items-center gap-4">
+                        <div className="text-center">
+                            <div className="flex gap-2 justify-center mb-2">
+                                <span className="font-psaltica text-5xl text-stone-300">𝁆</span>
+                                <span className="font-psaltica text-5xl text-stone-300">𝁆</span>
+                            </div>
+                            <p className="text-stone-500 text-sm">Două Isonuri normale</p>
+                            <p className="text-stone-600 text-xs">1 chronos fiecare</p>
+                        </div>
+                    </div>
+                    
+                    <div className="text-stone-500">
+                        <ChevronDown size={24} />
+                    </div>
+                    
+                    {/* With Gorgon - only on the SECOND ison */}
+                    <div className="flex items-center gap-4">
+                        <div className="text-center">
+                            <div className="flex gap-2 justify-center mb-2 items-start">
+                                <div className="flex flex-col items-center">
+                                    <span className="font-psaltica text-5xl text-stone-300">𝁆</span>
+                                    {/* NO gorgon on first ison */}
+                                </div>
+                                <div className="flex flex-col items-center">
+                                    <span className="font-psaltica text-5xl text-stone-300">𝁆</span>
+                                    <span className="font-psaltica text-2xl text-rose-400">{'\uE0F0'}</span>
+                                </div>
+                            </div>
+                            <p className="text-rose-400 text-sm font-medium">Același grup CU Gorgon</p>
+                            <p className="text-stone-600 text-xs">Gorgonul e doar pe a doua notă, dar afectează AMBELE</p>
+                        </div>
+                    </div>
+                    
+                    <div className="bg-yellow-500/10 border border-yellow-500/20 rounded-xl p-4 max-w-lg text-center">
+                        <p className="text-stone-300 text-sm">
+                            <strong className="text-yellow-500">Regula de aur:</strong> Gorgonul afectează <strong>semnul pe care se așează și semnul dinainte</strong>. 
+                            Aici e doar pe a doua notă, dar scurtează ambele!
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            {/* Clasma + Gorgon - Formula Corectă (Ionascu p.37) */}
+            <div className="mb-12 bg-gradient-to-r from-stone-900/60 to-stone-800/40 border border-rose-500/20 rounded-2xl p-8 overflow-hidden relative">
+                <div className="absolute top-0 right-0 p-4 opacity-10 pointer-events-none">
+                    <span className="font-psaltica text-8xl text-rose-500">𝁆´</span>
+                </div>
+                
+                <h3 className="text-xl font-byzantine text-center text-rose-500/90 mb-6">
+                    Clasma Următă de Gorgon
+                </h3>
+                
+                <div className="flex flex-col items-center gap-4 mb-6">
+                    <p className="text-stone-400 text-sm max-w-lg text-center">
+                        După Ionascu (p.37): Clasma cere 2 timpi, gorgonul împarte timpul în jumătăți.
+                        Rezultat: prima notă = 1½ timpi, a doua = ½ timp.
+                    </p>
+                </div>
+                
+                <div className="flex justify-center items-center gap-4 mb-6">
+                    <div className="flex flex-col items-center">
+                        <span className="font-psaltica text-4xl text-stone-300">𝁆</span>
+                        <span className="font-psaltica text-xl text-sky-400">{'\uE0D0'}</span>
+                        <span className="text-stone-500 text-xs mt-1">Ga (clasma)</span>
+                    </div>
+                    <span className="text-stone-500 text-2xl">+</span>
+                    <div className="flex flex-col items-center">
+                        <span className="font-psaltica text-4xl text-stone-300">𝁇</span>
+                        <span className="font-psaltica text-xl text-rose-400">{'\uE0F0'}</span>
+                        <span className="text-stone-500 text-xs mt-1">Di (gorgon, urcă 1)</span>
+                    </div>
+                    <span className="text-stone-500 text-2xl">=</span>
+                    <div className="flex flex-col items-center text-center">
+                        <span className="text-stone-300 text-sm font-medium">2 timpi total</span>
+                        <span className="text-stone-500 text-xs">1½ + ½</span>
+                    </div>
+                </div>
+                
+                <div className="max-w-md mx-auto bg-stone-950/50 rounded-xl p-4 border border-stone-800">
+                    <div className="flex items-center gap-2 mb-3">
+                        <span className="text-rose-400 font-bold text-sm">Timp 1:</span>
+                        <span className="text-stone-300 text-sm">Ga singur — 1 timp întreg</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                        <span className="text-rose-400 font-bold text-sm">Timp 2:</span>
+                        <span className="text-stone-300 text-sm">Ga + Di la ridicare — ½ + ½</span>
+                    </div>
+                </div>
+                
+                <p className="text-center text-stone-500 text-xs mt-4 max-w-lg mx-auto">
+                    <em>"Vom bate de două ori și la ridicarea de mână cântăm nota cu gorgonul."</em> — Ionascu
+                </p>
+            </div>
+
+            {/* Temporal Signs Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                {/* Augmentation Column */}
+                <div className="bg-stone-900/40 border border-stone-800 rounded-2xl p-6">
+                    <div className="flex items-center gap-3 mb-6 border-b border-stone-800 pb-4">
+                        <Hourglass className="text-sky-500" size={24} />
+                        <h3 className="text-lg font-byzantine text-sky-500">Prelungire Temporală</h3>
+                        <span className="text-xs bg-sky-500/10 text-sky-400 px-2 py-1 rounded">Augmentare</span>
+                    </div>
+                    
+                    <div className="space-y-4">
+                        {TEMPORAL_SIGNS.filter(s => s.category === 'augmentation').map(sign => (
+                            <div key={sign.id} className="flex items-center justify-between group p-3 rounded-lg hover:bg-stone-800/50 transition-colors">
+                                <div className="flex items-center gap-4">
+                                    <div className="flex flex-col items-center w-12">
+                                        <span className="font-psaltica text-3xl text-stone-300">{sign.caracter}</span>
+                                    </div>
+                                    <div>
+                                        <p className="text-stone-200 font-medium">{sign.nume}</p>
+                                        <p className="text-stone-500 text-xs">{sign.descriere}</p>
+                                    </div>
+                                </div>
+                                <div className="text-right">
+                                    <span className="text-sky-400 font-mono text-sm">×{sign.batai}</span>
+                                    <p className="text-stone-600 text-[10px]">{sign.detalii}</p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
+                {/* Division Column */}
+                <div className="bg-stone-900/40 border border-stone-800 rounded-2xl p-6">
+                    <div className="flex items-center gap-3 mb-6 border-b border-stone-800 pb-4">
+                        <Zap className="text-rose-500" size={24} />
+                        <h3 className="text-lg font-byzantine text-rose-500">Grăbire Temporală</h3>
+                        <span className="text-xs bg-rose-500/10 text-rose-400 px-2 py-1 rounded">Diviziune</span>
+                    </div>
+                    
+                    <div className="space-y-4">
+                        {TEMPORAL_SIGNS.filter(s => s.category === 'division').map(sign => (
+                            <div key={sign.id} className="flex items-center justify-between group p-3 rounded-lg hover:bg-stone-800/50 transition-colors">
+                                <div className="flex items-center gap-4">
+                                    <div className="flex flex-col items-center w-12">
+                                        <span className="font-psaltica text-3xl text-stone-300">{sign.caracter}</span>
+                                    </div>
+                                    <div>
+                                        <p className="text-stone-200 font-medium">{sign.nume}</p>
+                                        <p className="text-stone-500 text-xs">{sign.descriere}</p>
+                                    </div>
+                                </div>
+                                <div className="text-right">
+                                    <span className="text-rose-400 font-mono text-sm">÷{1/sign.batai}</span>
+                                    <p className="text-stone-600 text-[10px]">{sign.detalii}</p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </div>
+
+            {/* Tempo (Agogi) Section */}
+            <div className="mb-12 bg-stone-900/40 border border-stone-800 rounded-2xl p-8">
+                <div className="flex items-center gap-3 mb-6">
+                    <Clock className="text-emerald-500" size={24} />
+                    <h3 className="text-xl font-byzantine text-emerald-500/90">Semne de Tempo (Agogi)</h3>
+                </div>
+                
+                <p className="text-stone-400 text-sm mb-6">
+                    Semnele de tempo (agogi) controlează viteza generală a piesei, spre deosebire de semnele temporale 
+                    care modifică durata neumelor individuale.
+                </p>
+                
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    {TEMPO_SIGNS.map((tempo) => (
+                        <div key={tempo.id} className="bg-stone-950/50 rounded-lg p-4 text-center border border-stone-800/50 hover:border-emerald-500/30 transition-colors">
+                            <span className="font-psaltica text-3xl text-stone-300 block mb-2">{tempo.caracter}</span>
+                            <p className="text-stone-300 text-sm font-medium">{tempo.nume}</p>
+                            <p className="text-stone-600 text-xs">{tempo.descriere}</p>
+                        </div>
+                    ))}
+                </div>
+            </div>
+
+            {/* Formula Summary */}
+            <div className="bg-gradient-to-r from-yellow-500/5 to-stone-900/40 border border-yellow-500/10 rounded-2xl p-8">
+                <h3 className="text-xl font-byzantine text-yellow-500/80 mb-4 text-center">Formula Temporală</h3>
+                <div className="flex flex-wrap justify-center items-center gap-4 text-stone-300">
+                    <div className="bg-stone-950/60 px-4 py-3 rounded-lg border border-stone-800">
+                        <span className="text-stone-500 text-xs block mb-1">Neumă cantabilă</span>
+                        <span className="font-psaltica text-2xl">𝁆</span>
+                    </div>
+                    <span className="text-yellow-500 text-xl">+</span>
+                    <div className="bg-stone-950/60 px-4 py-3 rounded-lg border border-stone-800">
+                        <span className="text-stone-500 text-xs block mb-1">Semn temporal</span>
+                        <span className="font-psaltica text-2xl">{'\uE0F0'}</span>
+                    </div>
+                    <span className="text-yellow-500 text-xl">=</span>
+                    <div className="bg-yellow-500/10 px-4 py-3 rounded-lg border border-yellow-500/20">
+                        <span className="text-yellow-500 text-xs block mb-1">Rezultat</span>
+                        <span className="text-stone-200">Durata modificată</span>
+                    </div>
+                </div>
+                <p className="text-center text-stone-500 text-sm mt-4">
+                    Semnele temporale se aplică <strong>grupului întreg</strong> de neume, modificând durata fiecăreia în mod egal.
+                </p>
             </div>
         </div>
     );
