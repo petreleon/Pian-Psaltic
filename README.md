@@ -20,7 +20,7 @@
   <img src="https://img.shields.io/badge/Vite-B73BFE?style=flat-square&logo=vite&logoColor=FFD62E" alt="Vite" />
   <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white" alt="Tailwind" />
   <img src="https://img.shields.io/badge/Web%20Audio%20API-FF6F00?style=flat-square&logo=google-chrome&logoColor=white" alt="Web Audio" />
-  <img src="https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square" alt="License" />
+  <img src="https://img.shields.io/badge/License-AGPL%20%7C%20Proprietary-Critical?style=flat-square" alt="License" />
 </p>
 
 </div>
@@ -279,7 +279,28 @@ Unlike a standard equal-temperament piano, Byzantine chant uses **natural interv
 
 ## 📄 Licență
 
-Distribuit sub licența MIT. Vezi [LICENSE.md](./LICENSE.md) pentru detalii.
+Acest proiect este distribuit sub **licență multiplă (dual license)**:
+
+### 1. AGPL-3.0 (Open Source)
+Persoanelor fizice și instituțiilor non-profit li se acordă dreptul de a utiliza, modifica și distribui codul sursă conform licenței **GNU Affero General Public License v3.0 (AGPL-3.0)**.
+
+> 📖 Vezi fișierul complet: [LICENSE-AGPL.md](./LICENSE-AGPL.md)
+>
+> *În termeni simpli:* ești liber să clonezi, modifici și să rulezi propria instanță, dar orice modificare distribuită sau accesibilă public via rețea trebuie publicată sub aceeași licență.
+
+### 2. Licență Proprietară (Comercial)
+Utilizare comercială, distribuție proprietară și dezvoltare derivată sub licență privată sunt disponibile doar prin **acord contractual explicit** cu autorul.
+
+Pentru solicitări de licențiere comercială (white-label, SaaS, distribuție proprietară, integrare în produse comerciale):
+
+- 📧 **Email:** contact@petreleon.net (înlocuiește cu adresa ta reală)
+- 🌐 **Website:** https://petreleon.net (înlocuiește cu URL-ul tău)
+
+> ⚠️ **Fără acord scris, orice utilizare comercială, redistribuire proprietară sau sublicențiere este strict interzisă.**
+
+---
+
+**Toate drepturile rezervate.** © 2026 petreleon.
 
 ---
 
