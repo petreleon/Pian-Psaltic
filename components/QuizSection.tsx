@@ -195,7 +195,9 @@ export const QuizSection: React.FC = () => {
                     break;
                 }
                 case 5: { // Reverse by description
-                    const choicesSigns = shuffleArray(TEMPORAL_SIGNS).slice(0, 4);
+                    const others = TEMPORAL_SIGNS.filter(s => s.id !== sign.id);
+                    const wrongChoices = shuffleArray(others).slice(0, 3);
+                    const choicesSigns = shuffleArray([sign, ...wrongChoices]);
                     const correctIdx = choicesSigns.findIndex(s => s.id === sign.id);
                     question = {
                         questionText: `Găsește semnul care: ${sign.descriere}`,
@@ -224,10 +226,9 @@ export const QuizSection: React.FC = () => {
                     const candidates2 = TEMPORAL_SIGNS.filter(s => s.batai === sign.batai);
                     const chosen2 = candidates2[Math.floor(Math.random() * candidates2.length)];
                     const beatLabel = chosen2.batai === 0.5 ? '½' : chosen2.batai === 0.333 ? '⅓' : chosen2.batai === 0.25 ? '¼' : `${chosen2.batai}`;
-                    const choicesSigns = shuffleArray(TEMPORAL_SIGNS).slice(0, 4);
-                    if (!choicesSigns.find(s => s.id === chosen2.id)) {
-                        choicesSigns[Math.floor(Math.random() * 4)] = chosen2;
-                    }
+                    const others = TEMPORAL_SIGNS.filter(s => s.batai !== chosen2.batai);
+                    const wrongChoices = shuffleArray(others).slice(0, 3);
+                    const choicesSigns = shuffleArray([chosen2, ...wrongChoices]);
                     const cIdx = choicesSigns.findIndex(s => s.id === chosen2.id);
                     question = {
                         questionText: `Găsește semnul care face nota să dureze ${beatLabel} bătăi:`,
@@ -253,7 +254,9 @@ export const QuizSection: React.FC = () => {
                     explanation: `${tempo.nume} = ${tempo.descriere}.`,
                 };
             } else if (templateRoll === 9) {
-                const choicesTempos = shuffleArray(TEMPO_SIGNS).slice(0, 4);
+                const others = TEMPO_SIGNS.filter(t => t.id !== tempo.id);
+                const wrongChoices = shuffleArray(others).slice(0, 3);
+                const choicesTempos = shuffleArray([tempo, ...wrongChoices]);
                 const cIdx = choicesTempos.findIndex(t => t.id === tempo.id);
                 question = {
                     questionText: `Găsește semnul de tempo pentru: ${tempo.descriere}`,
