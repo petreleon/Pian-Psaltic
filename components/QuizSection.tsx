@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { PSALTIC_SIGNS, NOTE_DEFINITIONS, TEMPORAL_SIGNS, TEMPO_SIGNS, PsalticSign, PsalticSignTip, NoteName, TemporalSign } from '../constants/psalticData';
+import { PSALTIC_SIGNS, NOTE_DEFINITIONS, TEMPORAL_SIGNS, TEMPO_SIGNS } from '../constants/psaltic';
+import { PsalticSign, PsalticSignTip, NoteName, TemporalSign } from '../constants/psaltic/types';
 import { CheckCircle2, XCircle, RotateCcw, ArrowRight } from 'lucide-react';
-import { NOTE_NAMES } from '../constants';
+import { NOTE_NAMES } from '../constants/music';
 
 // Helper pentru amestecarea notelor
 const shuffleNotes = (): NoteName[] => {

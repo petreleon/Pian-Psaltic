@@ -1,5 +1,5 @@
 import React from 'react';
-import { PSALTIC_SIGNS, TEMPORAL_SIGNS, TEMPO_SIGNS } from '../constants/psalticData';
+import { PSALTIC_SIGNS, TEMPORAL_SIGNS, TEMPO_SIGNS } from '../constants/psaltic';
 import { ChevronUp, ChevronDown, Minus, Clock, Zap, Hourglass } from 'lucide-react';
 
 export const TheorySection: React.FC = () => {

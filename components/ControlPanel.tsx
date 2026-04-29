@@ -1,5 +1,5 @@
 import React from 'react';
-import { GLASURI } from '../constants';
+import { GLASURI } from '../constants/glasuri';
 import { Settings, Music, Mic2, ArrowDown, ArrowUp, Minus, Volume2 } from 'lucide-react';
 
 interface ControlPanelProps {

@@ -1,5 +1,5 @@
 import React, { useMemo, useState } from 'react';
-import { generateKeyboardMap } from '../constants';
+import { generateKeyboardMap } from '../constants/glasuri';
 import { Key } from './Key';
 import { audioEngine } from '../services/audioEngine';
 
