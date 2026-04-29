@@ -208,10 +208,9 @@ export const QuizSection: React.FC = () => {
                 case 6: { // Reverse by affected neumes
                     const candidates = TEMPORAL_SIGNS.filter(s => s.affectedNeumes === sign.affectedNeumes);
                     const chosen = candidates[Math.floor(Math.random() * candidates.length)];
-                    const choicesSigns = shuffleArray(TEMPORAL_SIGNS).slice(0, 4);
-                    if (!choicesSigns.find(s => s.id === chosen.id)) {
-                        choicesSigns[Math.floor(Math.random() * 4)] = chosen;
-                    }
+                    const others = TEMPORAL_SIGNS.filter(s => s.affectedNeumes !== chosen.affectedNeumes);
+                    const wrongChoices = shuffleArray(others).slice(0, 3);
+                    const choicesSigns = shuffleArray([chosen, ...wrongChoices]);
                     const cIdx = choicesSigns.findIndex(s => s.id === chosen.id);
                     question = {
                         questionText: `Găsește semnul care afectează ${chosen.affectedNeumes} semn${chosen.affectedNeumes > 1 ? 'e' : ''}:`,
