@@ -351,7 +351,7 @@ export const TheorySection: React.FC = () => {
                     <div className="bg-yellow-500/10 border border-yellow-500/20 rounded-xl p-4 max-w-lg text-center">
                         <p className="text-stone-300 text-sm">
                             <strong className="text-yellow-500">Regula de aur:</strong> Gorgonul afectează <strong>semnul pe care se așează și semnul dinainte</strong>. 
-                            Aici e doar pe a doua notă, dar scurtează ambele!
+                            Ambele se cântă într-o singură bătaie, iar nota cu gorgon se ia <strong>la ridicarea de mână</strong> (pe semnul ascendent).
                         </p>
                     </div>
                 </div>
@@ -369,8 +369,12 @@ export const TheorySection: React.FC = () => {
                 
                 <div className="flex flex-col items-center gap-4 mb-6">
                     <p className="text-stone-400 text-sm max-w-lg text-center">
-                        După Ionascu (p.37): Clasma cere 2 timpi, gorgonul împarte timpul în jumătăți.
-                        Rezultat: prima notă = 1½ timpi, a doua = ½ timp.
+                        După Ionascu: clasma cere să batem de 2 ori (4 mișcări de mână), iar gorgonul
+                        împarte timpul în două jumătăți. Prima notă este mai lungă, a doua se ia
+                        la ridicarea de mână, ambele împreună totalizând 2 timpi.
+                    </p>
+                    <p className="text-stone-500 text-xs max-w-md text-center italic">
+                        1 timp = coborâre de mână + ridicare de mână (o bătaie completă)
                     </p>
                 </div>
                 
@@ -378,13 +382,13 @@ export const TheorySection: React.FC = () => {
                     <div className="flex flex-col items-center">
                         <span className="font-psaltica text-4xl text-stone-300">𝁆</span>
                         <span className="font-psaltica text-xl text-sky-400">{'\uE0D0'}</span>
-                        <span className="text-stone-500 text-xs mt-1">Ga (clasma)</span>
+                        <span className="text-stone-500 text-xs mt-1">Semn cu Clasma</span>
                     </div>
                     <span className="text-stone-500 text-2xl">+</span>
                     <div className="flex flex-col items-center">
                         <span className="font-psaltica text-4xl text-stone-300">𝁇</span>
                         <span className="font-psaltica text-xl text-rose-400">{'\uE0F0'}</span>
-                        <span className="text-stone-500 text-xs mt-1">Di (gorgon, urcă 1)</span>
+                        <span className="text-stone-500 text-xs mt-1">Semn cu Gorgon</span>
                     </div>
                     <span className="text-stone-500 text-2xl">=</span>
                     <div className="flex flex-col items-center text-center">
@@ -396,11 +400,11 @@ export const TheorySection: React.FC = () => {
                 <div className="max-w-md mx-auto bg-stone-950/50 rounded-xl p-4 border border-stone-800">
                     <div className="flex items-center gap-2 mb-3">
                         <span className="text-rose-400 font-bold text-sm">Timp 1:</span>
-                        <span className="text-stone-300 text-sm">Ga singur — 1 timp întreg</span>
+                        <span className="text-stone-300 text-sm">prima notă = 1½ timpi (3 mișcări de mână)</span>
                     </div>
                     <div className="flex items-center gap-2">
                         <span className="text-rose-400 font-bold text-sm">Timp 2:</span>
-                        <span className="text-stone-300 text-sm">Ga + Di la ridicare — ½ + ½</span>
+                        <span className="text-stone-300 text-sm">a doua notă = ½ timp (la ridicarea de mână)</span>
                     </div>
                 </div>
                 
