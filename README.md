@@ -293,8 +293,7 @@ Utilizare comercială, distribuție proprietară și dezvoltare derivată sub li
 
 Pentru solicitări de licențiere comercială (white-label, SaaS, distribuție proprietară, integrare în produse comerciale):
 
-- 📧 **Email:** contact@petreleon.net (înlocuiește cu adresa ta reală)
-- 🌐 **Website:** https://petreleon.net (înlocuiește cu URL-ul tău)
+- 📧 **Email:** petreleonardos@gmail.com
 
 > ⚠️ **Fără acord scris, orice utilizare comercială, redistribuire proprietară sau sublicențiere este strict interzisă.**
 
