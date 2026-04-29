@@ -76,7 +76,7 @@ Spre deosebire de un pian standard (temperament egal), muzica psaltică foloseș
 | Funcție | Descriere |
 |---------|-----------|
 | **8 Glasuri** | Comutare instantă între cele 8 ehuri bizantine |
-| **Octavă reglabilă** | Transpunere ±2 octave pentru fiecare glas |
+| **Octavă reglabilă** | Transpunere ±1 octave pentru fiecare glas |
 | **Diapazon reglabil** | Setarea frecvenței de bază (Ni/Pa/Vu etc.) |
 | **Volum & Envelope** | Control fin al intensității și al atacului/decay-ului |
 | **Taste vizuale** | Claviatură colorată indicând notele fiecărui glas |
