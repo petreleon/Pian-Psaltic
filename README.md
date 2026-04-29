@@ -235,9 +235,6 @@ Pian-Psaltic/
 - [x] Quiz interactiv (semne, note, durate)
 - [x] Refactorizare constante (split monolit)
 - [ ] Refactorizare componente `QuizSection` și `TheorySection`
-- [ ] Export partituri / secvențe cântate
-- [ ] Mod analiză melodică automată
-- [ ] Suport mobil îmbunătățit (touch gesture-uri)
 
 ---
 
