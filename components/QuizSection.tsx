@@ -107,7 +107,7 @@ export const QuizSection: React.FC = () => {
     const generateTheoryQuestion = () => {
         setTheoryAnswerIndex(null);
 
-        const templateRoll = Math.floor(Math.random() * 16);
+        const templateRoll = Math.floor(Math.random() * 18);
 
         // Helper to get unique wrong choices
         const getWrongChoices = <T,>(pool: T[], correct: T, count: number, extract: (item: T) => string): string[] => {
@@ -345,7 +345,7 @@ export const QuizSection: React.FC = () => {
                     );
                     break;
                 }
-                default: { // case 15
+                case 15: {
                     question = {
                         questionText: 'Care este efectul combinației Clasma + Gorgon?',
                         choices: shuffleArray([
@@ -359,6 +359,40 @@ export const QuizSection: React.FC = () => {
                     };
                     question.correctIndex = question.choices.indexOf(
                         'Prima notă = 1½ timpi, a doua (cu gorgon) = ½ timp. Total 2 timpi.'
+                    );
+                    break;
+                }
+                case 16: {
+                    question = {
+                        questionText: 'La formula Semn anterior + Oligon cu Kentemata DEASUPRA + Gorgon, pe cine afectează Gorgonul?',
+                        choices: shuffleArray([
+                            'Doar Oligonul cu Kentemata (ultimele două). Semnul anterior rămâne neafectat.',
+                            'Toate cele trei semne (Semn anterior, Oligon, Kentemata).',
+                            'Doar semnul anterior. Oligonul cu Kentemata rămân neafectate.',
+                            'Niciun semn. Gorgonul nu se aplică pe semne compuse.',
+                        ]),
+                        correctIndex: -1,
+                        explanation: 'Când Kentemata sunt DEASUPRA, Gorgonul afectează doar Oligonul cu Kentemata (ultimele două). Semnul anterior rămâne neafectat (1 bătaie). Rezultat: 1 + ½ + ½.',
+                    };
+                    question.correctIndex = question.choices.indexOf(
+                        'Doar Oligonul cu Kentemata (ultimele două). Semnul anterior rămâne neafectat.'
+                    );
+                    break;
+                }
+                default: { // case 17
+                    question = {
+                        questionText: 'La formula Semn anterior + Oligon cu Kentemata DEDESUBT + Gorgon, pe cine afectează Gorgonul?',
+                        choices: shuffleArray([
+                            'Semnul anterior și Kentemata. Oligonul se cântă neafectat. Rezultat: 1½ + ½.',
+                            'Toate cele trei semne: Semn anterior, Oligon și Kentemata.',
+                            'Doar Oligonul. Semnul anterior și Kentemata rămân neafectate.',
+                            'Doar Kentemata. Semnul anterior și Oligonul rămân neafectate.',
+                        ]),
+                        correctIndex: -1,
+                        explanation: 'Când Kentemata sunt DEDESUBT, Oligonul se cântă neafectat (nu e mut!). Gorgonul afectează semnul anterior și Kentemata, formând formula 1½ + ½ (ca la Clasmă + Gorgon).',
+                    };
+                    question.correctIndex = question.choices.indexOf(
+                        'Semnul anterior și Kentemata. Oligonul se cântă neafectat. Rezultat: 1½ + ½.'
                     );
                     break;
                 }

@@ -137,9 +137,15 @@ export const TheorySection: React.FC = () => {
                             {/* 2 trepte */}
                             <div className="flex flex-col gap-1 border-b border-stone-800/50 pb-2">
                                 <div className="flex items-center justify-between group text-right">
-                                    <span className="text-stone-500 text-xs font-medium">+ 2 trepte (consecutiv)</span>
+                                    <span className="text-stone-500 text-xs font-medium">+ 2 trepte (consecutiv, jos)</span>
                                     <span className="text-stone-400 text-sm flex items-center justify-end gap-3">
                                         <span className="font-psaltica text-2xl text-yellow-500/80">{'\uE082'}</span>
+                                    </span>
+                                </div>
+                                <div className="flex items-center justify-between group text-right">
+                                    <span className="text-stone-500 text-xs font-medium">+ 2 trepte (consecutiv, sus)</span>
+                                    <span className="text-stone-400 text-sm flex items-center justify-end gap-3">
+                                        <span className="font-psaltica text-2xl text-yellow-500/80">{'\uE083'}</span>
                                     </span>
                                 </div>
                                 <div className="flex items-center justify-between group text-right">
@@ -285,7 +291,7 @@ export const TheorySection: React.FC = () => {
                     </li>
                     <li className="flex gap-2">
                         <span className="text-yellow-500 font-bold">•</span>
-                        <span><strong>Kentemata (<span className="font-psaltica text-lg">𝁎</span>)</strong> pot fi puse sub un Oligon; în acest caz Oligonul devine "mut", iar Kentemata urcă o treaptă scurt.</span>
+                        <span><strong>Kentemata (<span className="font-psaltica text-lg">𝁎</span>)</strong> pot fi puse sub sau deasupra unui Oligon; în acest caz Oligonul devine "mut", iar Kentemata urcă o treaptă moale. Poziția lor (sub vs. deasupra) are efect asupra scării (jos vs. sus).</span>
                     </li>
                     <li className="flex gap-2">
                         <span className="text-yellow-500 font-bold">•</span>
@@ -410,6 +416,106 @@ export const TheorySection: React.FC = () => {
                 
                 <p className="text-center text-stone-500 text-xs mt-4 max-w-lg mx-auto">
                     <em>"Vom bate de două ori și la ridicarea de mână cântăm nota cu gorgonul."</em> — Ionascu
+                </p>
+            </div>
+
+            {/* Gorgon + Oligon cu Kentemata deasupra */}
+            <div className="mb-12 bg-gradient-to-r from-stone-900/60 to-stone-800/40 border border-emerald-500/20 rounded-2xl p-8 overflow-hidden relative">
+                <div className="absolute top-0 right-0 p-4 opacity-10 pointer-events-none">
+                    <span className="font-psaltica text-8xl text-emerald-500">{'\uE083'}</span>
+                </div>
+
+                <h3 className="text-xl font-byzantine text-center text-emerald-500/90 mb-6">
+                    Gorgon pe Oligon cu Kentemata Deasupra
+                </h3>
+
+                <div className="flex flex-col items-center gap-4 mb-6">
+                    <p className="text-stone-400 text-sm max-w-lg text-center">
+                        Când Gorgonul se așează pe un Oligon cu Kentemata <strong>deasupra</strong>, Gorgonul
+                        afectează <strong>doar acest semn compus</strong> (Oligon + Kentemata). Semnul anterior
+                        rămâne neafectat, durând o bătaie întreagă.
+                    </p>
+                </div>
+
+                <div className="flex justify-center items-center gap-4 mb-6">
+                    <div className="flex flex-col items-center">
+                        <span className="font-psaltica text-4xl text-stone-300">𝁆</span>
+                        <span className="text-stone-500 text-xs mt-1">Semn anterior (1 bătaie)</span>
+                    </div>
+                    <span className="text-stone-500 text-2xl">+</span>
+                    <div className="flex flex-col items-center">
+                        <span className="font-psaltica text-4xl text-stone-300">{'\uE083'}</span>
+                        <span className="font-psaltica text-xl text-rose-400">{'\uE0F0'}</span>
+                        <span className="text-stone-500 text-xs mt-1">Oligon+K + Gorgon</span>
+                    </div>
+                    <span className="text-stone-500 text-2xl">=</span>
+                    <div className="flex flex-col items-center text-center">
+                        <span className="text-stone-300 text-sm font-medium">2 bătăi total</span>
+                        <span className="text-stone-500 text-xs">1 + ½ + ½</span>
+                    </div>
+                </div>
+
+                <div className="max-w-md mx-auto bg-stone-950/50 rounded-xl p-4 border border-stone-800">
+                    <div className="flex items-center gap-2 mb-3">
+                        <span className="text-emerald-400 font-bold text-sm">Bătaia 1:</span>
+                        <span className="text-stone-300 text-sm">Semn anterior (gorgonul nu-l afectează) = 1 bătaie</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                        <span className="text-emerald-400 font-bold text-sm">Bătaia 2:</span>
+                        <span className="text-stone-300 text-sm">Oligon + Kentemata = ½ la coborâre + ½ la ridicare</span>
+                    </div>
+                </div>
+            </div>
+
+            {/* Gorgon + Oligon cu Kentemata dedesubt */}
+            <div className="mb-12 bg-gradient-to-r from-stone-900/60 to-stone-800/40 border border-sky-500/20 rounded-2xl p-8 overflow-hidden relative">
+                <div className="absolute top-0 right-0 p-4 opacity-10 pointer-events-none">
+                    <span className="font-psaltica text-8xl text-sky-500">{'\uE082'}</span>
+                </div>
+
+                <h3 className="text-xl font-byzantine text-center text-sky-500/90 mb-6">
+                    Gorgon pe Oligon cu Kentemata Dedesubt
+                </h3>
+
+                <div className="flex flex-col items-center gap-4 mb-6">
+                    <p className="text-stone-400 text-sm max-w-lg text-center">
+                        Când Gorgonul se așează pe un Oligon cu Kentemata <strong>dedesubt</strong>, Gorgonul
+                        afectează <strong>Semnul anterior și Kentemata</strong> (Oligonul se cântă neafectat).
+                        Rezultatul: aceeași formulă ca la Clasma + Gorgon — 1½ + ½.
+                    </p>
+                </div>
+
+                <div className="flex justify-center items-center gap-4 mb-6">
+                    <div className="flex flex-col items-center">
+                        <span className="font-psaltica text-4xl text-stone-300">𝁆</span>
+                        <span className="text-stone-500 text-xs mt-1">Semn anterior</span>
+                    </div>
+                    <span className="text-stone-500 text-2xl">+</span>
+                    <div className="flex flex-col items-center">
+                        <span className="font-psaltica text-4xl text-stone-300">{'\uE082'}</span>
+                        <span className="font-psaltica text-xl text-rose-400">{'\uE0F0'}</span>
+                        <span className="text-stone-500 text-xs mt-1">Oligon+K + Gorgon</span>
+                    </div>
+                    <span className="text-stone-500 text-2xl">=</span>
+                    <div className="flex flex-col items-center text-center">
+                        <span className="text-stone-300 text-sm font-medium">2 bătăi total</span>
+                        <span className="text-stone-500 text-xs">1½ + ½</span>
+                    </div>
+                </div>
+
+                <div className="max-w-md mx-auto bg-stone-950/50 rounded-xl p-4 border border-stone-800">
+                    <div className="flex items-center gap-2 mb-3">
+                        <span className="text-sky-400 font-bold text-sm">Bătaia 1:</span>
+                        <span className="text-stone-300 text-sm">Semn anterior (afectat de gorgon) = 1½ timpi</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                        <span className="text-sky-400 font-bold text-sm">Bătaia 2:</span>
+                        <span className="text-stone-300 text-sm">Kentemata (la ridicare) = ½ timp</span>
+                    </div>
+                </div>
+
+                    <p className="text-center text-stone-500 text-xs mt-4 max-w-lg mx-auto">
+                    Oligonul nu e mut — se cântă neafectat. Gorgonul afectează doar semnul anterior și Kentemata, formând formula 1½ + ½.
                 </p>
             </div>
 

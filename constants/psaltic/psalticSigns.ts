@@ -41,6 +41,16 @@ export const PSALTIC_SIGNS: PsalticSign[] = [
         nume: 'Oligon cu Kentemata dedesubt',
         caracter: '\uE082',
         descriere: 'Urcă 2 trepte consecutiv, neaccentuat.',
+        detalii: 'Oligonul devine "mut", iar Kentemata urcă o treaptă moale.',
+        tip: 'urcare',
+        valoare: 2
+    },
+    {
+        id: 'oligon_kentimata_sus',
+        nume: 'Oligon cu Kentemata deasupra',
+        caracter: '\uE083',
+        descriere: 'Urcă 2 trepte, neaccentuat (moale).',
+        detalii: 'Kentemata puse deasupra Oligonului adaugă o treaptă moale peste treapta Oligonului.',
         tip: 'urcare',
         valoare: 2
     },
