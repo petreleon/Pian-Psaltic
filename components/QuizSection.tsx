@@ -389,7 +389,7 @@ export const QuizSection: React.FC = () => {
                             'Doar Kentemata. Semnul anterior și Oligonul rămân neafectate.',
                         ]),
                         correctIndex: -1,
-                        explanation: 'Când Kentemata sunt DEDESUBT, Oligonul se cântă neafectat (nu e mut!). Gorgonul afectează semnul anterior și Kentemata, formând formula 1½ + ½ (ca la Clasmă + Gorgon).',
+                        explanation: 'Când Kentemata sunt DEDESUBT, Oligonul se cântă neafectat (1 timp). Gorgonul inăjumătățește doar semnul anterior și Kentemata (½ fiecare). Formula: ½ + 1 + ½.',
                     };
                     question.correctIndex = question.choices.indexOf(
                         'Semnul anterior și Kentemata. Oligonul se cântă neafectat. Rezultat: 1½ + ½.'

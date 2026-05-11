@@ -481,7 +481,7 @@ export const TheorySection: React.FC = () => {
                     <p className="text-stone-400 text-sm max-w-lg text-center">
                         Când Gorgonul se așează pe un Oligon cu Kentemata <strong>dedesubt</strong>, Gorgonul
                         afectează <strong>Semnul anterior și Kentemata</strong> (Oligonul se cântă neafectat).
-                        Rezultatul: aceeași formulă ca la Clasma + Gorgon — 1½ + ½.
+                        Rezultatul: semnul anterior și Kentemata sunt inăjumătățite (½ fiecare), iar Oligonul rămâne intact (1 timp). Formula: ½ + 1 + ½.
                     </p>
                 </div>
 
@@ -499,23 +499,27 @@ export const TheorySection: React.FC = () => {
                     <span className="text-stone-500 text-2xl">=</span>
                     <div className="flex flex-col items-center text-center">
                         <span className="text-stone-300 text-sm font-medium">2 bătăi total</span>
-                        <span className="text-stone-500 text-xs">1½ + ½</span>
+                        <span className="text-stone-500 text-xs">½ + 1 + ½</span>
                     </div>
                 </div>
 
                 <div className="max-w-md mx-auto bg-stone-950/50 rounded-xl p-4 border border-stone-800">
                     <div className="flex items-center gap-2 mb-3">
                         <span className="text-sky-400 font-bold text-sm">Bătaia 1:</span>
-                        <span className="text-stone-300 text-sm">Semn anterior (afectat de gorgon) = 1½ timpi</span>
+                        <span className="text-stone-300 text-sm">Semn anterior (inăjumătățit de gorgon) = ½ timp</span>
+                    </div>
+                    <div className="flex items-center gap-2 mb-3">
+                        <span className="text-sky-400 font-bold text-sm">Bătaia 2:</span>
+                        <span className="text-stone-300 text-sm">Oligon (neafectat) = 1 timp</span>
                     </div>
                     <div className="flex items-center gap-2">
-                        <span className="text-sky-400 font-bold text-sm">Bătaia 2:</span>
+                        <span className="text-sky-400 font-bold text-sm">Bătaia 3:</span>
                         <span className="text-stone-300 text-sm">Kentemata (la ridicare) = ½ timp</span>
                     </div>
                 </div>
 
                     <p className="text-center text-stone-500 text-xs mt-4 max-w-lg mx-auto">
-                    Oligonul nu e mut — se cântă neafectat. Gorgonul afectează doar semnul anterior și Kentemata, formând formula 1½ + ½.
+                    Oligonul nu e mut — se cântă neafectat (1 timp). Gorgonul inăjumătățește doar semnul anterior și Kentemata (½ fiecare). Formula: ½ + 1 + ½.
                 </p>
             </div>
 
