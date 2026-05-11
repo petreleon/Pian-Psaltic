@@ -345,8 +345,7 @@ export const TheorySection: React.FC = () => {
                                     {/* NO gorgon on first ison */}
                                 </div>
                                 <div className="flex flex-col items-center">
-                                    <span className="font-psaltica text-5xl text-stone-300">𝁆</span>
-                                    <span className="font-psaltica text-2xl text-rose-400">{'\uE0F0'}</span>
+                                    <span className="font-psaltica text-5xl text-stone-300">𝁆{'\uE0F0'}</span>
                                 </div>
                             </div>
                             <p className="text-rose-400 text-sm font-medium">Același grup CU Gorgon</p>
@@ -392,8 +391,7 @@ export const TheorySection: React.FC = () => {
                     </div>
                     <span className="text-stone-500 text-2xl">+</span>
                     <div className="flex flex-col items-center">
-                        <span className="font-psaltica text-4xl text-stone-300">𝁇</span>
-                        <span className="font-psaltica text-xl text-rose-400">{'\uE0F0'}</span>
+                        <span className="font-psaltica text-4xl text-stone-300">𝁇{'\uE0F0'}</span>
                         <span className="text-stone-500 text-xs mt-1">Semn cu Gorgon</span>
                     </div>
                     <span className="text-stone-500 text-2xl">=</span>
@@ -444,8 +442,7 @@ export const TheorySection: React.FC = () => {
                     </div>
                     <span className="text-stone-500 text-2xl">+</span>
                     <div className="flex flex-col items-center">
-                        <span className="font-psaltica text-4xl text-stone-300">{'\uE083'}</span>
-                        <span className="font-psaltica text-xl text-rose-400">{'\uE0F0'}</span>
+                        <span className="font-psaltica text-4xl text-stone-300">{'\uE083\uE0F0'}</span>
                         <span className="text-stone-500 text-xs mt-1">Oligon+K + Gorgon</span>
                     </div>
                     <span className="text-stone-500 text-2xl">=</span>
@@ -492,8 +489,7 @@ export const TheorySection: React.FC = () => {
                     </div>
                     <span className="text-stone-500 text-2xl">+</span>
                     <div className="flex flex-col items-center">
-                        <span className="font-psaltica text-4xl text-stone-300">{'\uE082'}</span>
-                        <span className="font-psaltica text-xl text-rose-400">{'\uE0F0'}</span>
+                        <span className="font-psaltica text-4xl text-stone-300">{'\uE082\uE0F0'}</span>
                         <span className="text-stone-500 text-xs mt-1">Oligon+K + Gorgon</span>
                     </div>
                     <span className="text-stone-500 text-2xl">=</span>
