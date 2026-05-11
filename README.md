@@ -85,10 +85,10 @@ Spre deosebire de un pian standard (temperament egal), muzica psaltică foloseș
 
 O bibliotecă completă a semnelor muzicale bizantine:
 
-- **Semne vocale** — Ison, Oligon, Petaste, Kentemata, Apoderma și combinații
+- **Semne vocale** — 27 de semne incluzând Oligon cu Kentemata (dedesubt și deasupra), combinații Kentima/Ypsili și variante accentuate Petasti
 - **Semne temporale** — Klasma, Apli, Dipli, Tripli, Gorgon, Digorgon, Trigorgon, Argon, Diargon
 - **Semne de tempo** — de la *Poli Argos* (foarte lent) la *Poli Gorgos* (foarte rapid)
-- **Reguli de combinație** — Kentima, Clasma + Gorgon (regula de aur), efecte ritmice
+- **Reguli de combinație** — Kentima, Clasma + Gorgon (regula de aur), Gorgon pe Oligon cu Kentemata (dedesubt/deasupra), efecte ritmice
 
 Fiecare semn include: glyph Unicode · denumire · descriere · formula ritmică · neume afectate.
 
@@ -98,7 +98,7 @@ Fiecare semn include: glyph Unicode · denumire · descriere · formula ritmică
 |-----|-------------|-----------|
 | **Test de Semne** | Medie | Direcție (urcare/coborâre/menținere) → trepte → nota rezultată |
 | **Test de Note** | Ușoară | Recunoașterea notelor bizantine după glifă |
-| **Test de Durată** | Avansată | 15 tipuri de întrebări despre efecte, bătăi, formule și reguli de combinație |
+| **Test de Durată** | Avansată | 17 tipuri de întrebări despre efecte, bătăi, formule și reguli de combinație (inclusiv Gorgon + Kentemata) |
 
 ---
 
@@ -210,7 +210,7 @@ Pian-Psaltic/
 │   ├── index.ts               # Barrel exports
 │   └── psaltic/
 │       ├── types.ts           # Tipuri: PsalticSign, TemporalSign, TempoSign
-│       ├── psalticSigns.ts    # Semne vocale (26 de semne)
+│       ├── psalticSigns.ts    # Semne vocale (27 de semne)
 │       ├── temporalSigns.ts   # Semne temporale (Klasma, Gorgon etc.)
 │       ├── tempoSigns.ts      # Semne de tempo (8 semne)
 │       ├── noteDefinitions.ts # Definițiile notelor bizantine
